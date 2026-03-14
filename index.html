@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Outlet de tênis Senai com as melhores marcas e preços">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Outlet Senai - Tênis com Desconto</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-link">
+                <div class="logo-box">OS</div>
+                <span class="brand-name">Outlet Senai</span>
+            </a>
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#quemsomos">Quem somos</a></li>
+                <li><a href="#contato" class="btn-contato">Contato</a></li>
+                <li><nav class="navbar">
+                        <div class="cart-container" onclick="toggleCarrinho()" style="cursor: pointer; position: relative;">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span>
+                        </div>
+                    </nav>
+
+                    <div id="carrinho-lateral" class="cart-modal">
+                            <h3>Seu Carrinho</h3>
+                        <div id="itens-lista"></div>
+                        <hr>
+                        <p>Total: <strong id="total-carrinho">R$ 0,00</strong></p>
+                        <button class="btn-finalizar">Finalizar Compra</button>
+                        <button onclick="toggleCarrinho()">Fechar</button>
+                    </div></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="banner" id="inicio">
+        <div class="banner-content">
+            <h1>Nova Coleção 2026</h1>
+            <p>Encontre os melhores tênis com até 40% de desconto</p>
+            <button class="btn-verprodutos">Ver Produtos</button>
+        </div>
+    </section>
+
+    <section class="produtos" id="produtos">
+
+        <div class="card">
+            <a href="tenis1.html" class="card-link">
+            <div class="card-image">
+                <img src="imagens/tenis1.jpg" alt="Tênis Nike">
+                <span class="badge-desconto">-30%</span>
+            </div>
+            </a>
+            <div class="card-content">
+                <h3>Tênis Nike Air</h3>
+                <p class="descricao">Conforto e desempenho em um único modelo</p>
+                <div class="preco-container">
+                    <p class="preco-original">R$ 599</p>
+                    <p class="preco">R$ 399</p>
+                </div>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Nike Air', 399, 'tenis1.html')">ADICIONAR AO CARRINHO</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="tenis2.html">
+            <div class="card-image">
+                <img src="imagens/tenis2.jpg" alt="Tênis Adidas">
+                <span class="badge-desconto">-25%</span>
+            </div>
+            </a>
+            <div class="card-content">
+                <h3>Tênis Adidas Ultra</h3>
+                <p class="descricao">Tecnologia de última geração</p>
+                <div class="preco-container">
+                    <p class="preco-original">R$ 499</p>
+                    <p class="preco">R$ 349</p>
+                </div>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Adidas Ultra', 349, 'tenis2.html')">ADICIONAR AO CARRINHO</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="tenis3.html">
+            <div class="card-image">
+                <img src="imagens/tenis3.jpg" alt="Tênis Puma">
+                <span class="badge-desconto">-40%</span>
+            </div>
+            </a>
+            <div class="card-content">
+                <h3>Tênis Puma Sport</h3>
+                <p class="descricao">Leveza e estilo em cada passo</p>
+                <div class="preco-container">
+                    <p class="preco-original">R$ 499</p>
+                    <p class="preco">R$ 299</p>
+                </div>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Puma Sport', 299, 'tenis3.html')">ADICIONAR AO CARRINHO</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre" id="quemsomos">
+        <h2>Por que nos escolher?</h2>
+        <div class="sobre-grid">
+            <div class="sobre-card">
+                <div class="sobre-icon">✓</div>
+                <h4>Preços Baixos</h4>
+                <p>Os melhores preços do mercado com qualidade garantida</p>
+            </div>
+            <div class="sobre-card">
+                <div class="sobre-icon">✓</div>
+                <h4>Frete Rápido</h4>
+                <p>Entrega em até 3 dias úteis para todo o Brasil</p>
+            </div>
+            <div class="sobre-card">
+                <div class="sobre-icon">✓</div>
+                <h4>Garantia</h4>
+                <p>30 dias de garantia em todos os produtos</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Outlet Senai</h4>
+                <p>Sua loja de tênis online com os melhores preços e qualidade garantida.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: contato@outletsenai.com</p>
+                <p>Tel: (11) 9999-9999</p>
+                <p>Participante: Gabriel, Jonathan, Kauê, Miguel</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Outlet Senai. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div id="toast-carrinho" class="toast">Produto adicionado ao carrinho!</div>
+    <script>
+       let itensCarrinho = []; // Nossa lista de produtos vazia
+
+function adicionarAoCarrinho(nome, preco, imagem) {
+    // 1. Adiciona o objeto do tênis na nossa lista
+    itensCarrinho.push({ nome, preco, imagem });
+
+    // 2. Atualiza o número no ícone
+    document.getElementById('cart-count').innerText = itensCarrinho.length;
+
+    // 3. Renderiza (desenha) a lista atualizada dentro do carrinho
+    atualizarVisualizacaoCarrinho();
+    
+    // Opcional: Avisar que foi adicionado (substituindo o alert)
+    console.log("Adicionado:", nome);
+}
+
+function atualizarVisualizacaoCarrinho() {
+    const listaHtml = document.getElementById('itens-lista');
+    const totalHtml = document.getElementById('total-carrinho');
+    let total = 0;
+
+    listaHtml.innerHTML = ""; // Limpa a lista para desenhar do zero
+
+    itensCarrinho.forEach((item) => {
+        total += item.preco;
+        listaHtml.innerHTML += `
+            <div class="item-no-carrinho">
+                <img src="${item.imagem}" alt="${item.nome}">
+                <div>
+                    <p><strong>${item.nome}</strong></p>
+                    <p>R$ ${item.preco}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    totalHtml.innerText = `R$ ${total.toFixed(2)}`;
+}
+
+// Função para abrir e fechar o carrinho ao clicar no ícone
+function toggleCarrinho() {
+    const modal = document.getElementById('carrinho-lateral');
+    if (modal.style.display === "block") {
+        modal.style.display = "none";
+    } else {
+        modal.style.display = "block";
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tênis Nike - Conforto e desempenho para corrida e treino">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Tênis Nike Air - Outlet Senai</title>
+    <style>
+        :root {
+            --color-primary: #dc2626;
+            --color-secondary: #991b1b;
+            --color-accent: #ffffff;
+            --color-dark: #1f2937;
+            --color-light: #f3f4f6;
+            --color-white: #ffffff;
+            --color-gray: #6b7280;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-dark);
+            background-color: var(--color-light);
+        }
+
+        .produto-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--color-white);
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .produto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .produto-imagem {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: var(--color-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .produto-imagem img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--color-accent);
+            color: black;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .produto-info h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-dark);
+        }
+
+        .produto-info .info-meta {
+            color: var(--color-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .avaliacao {
+            color: var(--color-accent);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .produto-preco {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--color-light);
+            border-radius: 8px;
+        }
+
+        .preco-original {
+            font-size: 0.9rem;
+            color: var(--color-gray);
+            text-decoration: line-through;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .preco-atual {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .produto-descricao {
+            margin: 2rem 0;
+            color: var(--color-gray);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .especificacoes {
+            margin: 2rem 0;
+        }
+
+        .especificacoes h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--color-dark);
+        }
+
+        .especificacoes ul {
+            list-style: none;
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .especificacoes li {
+            padding: 0.5rem 0;
+            color: var(--color-gray);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .especificacoes li:last-child {
+            border-bottom: none;
+        }
+
+        .quantidade {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .quantidade label {
+            font-weight: 600;
+        }
+
+        .quantidade input {
+            width: 70px;
+            padding: 0.5rem;
+            border: 1px solid var(--color-gray);
+            border-radius: 6px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .botoes {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .btn-comprar {
+            flex: 1;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-comprar:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-favorito {
+            background: white;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            min-width: 150px;
+        }
+
+        .btn-favorito:hover {
+            background: var(--color-light);
+        }
+
+        .voltar {
+            display: inline-block;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .voltar:hover {
+            color: var(--color-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .produto-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .produto-imagem {
+                height: 300px;
+            }
+
+            .produto-info h1 {
+                font-size: 1.5rem;
+            }
+
+            .preco-atual {
+                font-size: 2rem;
+            }
+
+            .botoes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="produto-container">
+        <a href="index.html" rel="prevs">← Voltar para Produtos</a>
+        
+        <div class="produto-grid">
+            <div class="produto-imagem">
+                <span class="badge">-30%</span>
+                <img src="imagens/tenis1.jpg" alt="Tênis Nike Air">
+            </div>
+
+            <div class="produto-info">
+                <h1>Tênis Nike Air</h1>
+                <div class="info-meta">Código: NK-2026-001</div>
+                <div class="avaliacao">⭐⭐⭐⭐⭐ 4.8 (248 avaliações)</div>
+                
+                <div class="produto-preco">
+                    <span class="preco-original">R$ 599,00</span>
+                    <div class="preco-atual">R$ 399,00</div>
+                </div>
+
+                <div class="produto-descricao">
+                    Tênis Nike Air de alto desempenho especialmente desenvolvido para corrida e treino. Combina conforto excepcional com tecnologia de última geração para proporcionar a melhor experiência ao usuário.
+                </div>
+
+                <div class="especificacoes">
+                    <h3>Características Principais</h3>
+                    <ul>
+                        <li>✓ Solado de borracha anti-derrapante</li>
+                        <li>✓ Palmilha anatômica e confortável</li>
+                        <li>✓ Tecnologia de amortecimento Air Max</li>
+                        <li>✓ Material respirável e leve</li>
+                        <li>✓ Disponível em 5 cores</li>
+                    </ul>
+                </div>
+
+                <div class="quantidade">
+                    <label for="qty">Quantidade:</label>
+                    <input type="number" id="qty" value="1" min="1" max="10">
+                </div>
+
+                <div class="botoes">
+                    <button class="btn-comprar">Comprar Agora</button>
+                    <button class="btn-favorito">♥ Favoritos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

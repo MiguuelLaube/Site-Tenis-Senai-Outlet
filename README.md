@@ -4,6 +4,11 @@
 
 ---
 
+## 💻 Acessar site pelo Github Pages
+https://miguuellaube.github.io/Site-Tenis-Senai-Outlet/
+
+---
+
 ## 📖 Sobre o Projeto
 
 Este projeto consiste em uma plataforma de e-commerce conceitual de tênis desenvolvida sob princípios de **design consciente, separação de responsabilidades (SoC) e UX Writing premium**. 
@@ -102,11 +107,6 @@ Desenvolvido de forma colaborativa pelos acadêmicos da turma de Análise e Dese
 *   **Jonathan**
 *   **Kauê**
 *   **Miguel**
-
----
-
-## 💻 Acessar site pelo Github Pages
-https://miguuellaube.github.io/Site-Tenis-Senai-Outlet/
 
 ---
 

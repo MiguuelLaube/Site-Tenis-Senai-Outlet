@@ -105,6 +105,11 @@ Desenvolvido de forma colaborativa pelos acadêmicos da turma de Análise e Dese
 
 ---
 
+## 💻 Acessar site pelo Github Pages
+https://miguuellaube.github.io/Site-Tenis-Senai-Outlet/
+
+---
+
 ## 📄 Termos e Licença
 
 Este projeto é de caráter puramente educacional e acadêmico. Todos os direitos de imagem e marcas pertencem aos seus respectivos detentores (Nike, Adidas e Puma).

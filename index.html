@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Outlet de tênis Senai com as melhores marcas e preços">
+    <meta name="description" content="Outlet Senai — Curadoria de silhuetas atemporais e design consciente. Encontre os tênis mais autênticos da cultura urbana.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Outlet Senai - Tênis com Desconto</title>
+    <title>Outlet Senai — Curadoria & Design de Tênis Premium</title>
 </head>
 <body>
     <nav class="navbar">
@@ -19,188 +19,221 @@
             </a>
             <ul class="menu">
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#quemsomos">Quem somos</a></li>
+                <li><a href="#produtos">Silhuetas</a></li>
+                <li><a href="#quemsomos">Manifesto</a></li>
                 <li><a href="#contato" class="btn-contato">Contato</a></li>
-                <li><nav class="navbar">
-                        <div class="cart-container" onclick="toggleCarrinho()" style="cursor: pointer; position: relative;">
+                <li>
+                    <div class="cart-container" onclick="toggleCarrinho()" style="cursor: pointer; position: relative;">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span id="cart-count">0</span>
-                        </div>
-                    </nav>
+                    </div>
 
                     <div id="carrinho-lateral" class="cart-modal">
-                            <h3>Seu Carrinho</h3>
+                        <h3>Seu Carrinho</h3>
                         <div id="itens-lista"></div>
-                        <hr>
-                        <p>Total: <strong id="total-carrinho">R$ 0,00</strong></p>
-                        <button class="btn-finalizar">Finalizar Compra</button>
-                        <button onclick="toggleCarrinho()">Fechar</button>
-                    </div></li>
+                        <hr style="border: 0; border-top: 1px solid var(--color-earth-light); margin: 20px 0;">
+                        <p style="margin-bottom: 20px; font-size: 1.1rem;">Total: <strong id="total-carrinho" style="font-weight: 700; color: var(--color-dark);">R$ 0,00</strong></p>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="btn-finalizar">Finalizar Compra</button>
+                            <button onclick="toggleCarrinho()" style="background: transparent; border: 1px solid var(--color-earth-light); padding: 10px; border-radius: 4px; cursor: pointer; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px;">Fechar</button>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
     <section class="banner" id="inicio">
         <div class="banner-content">
-            <h1>Nova Coleção 2026</h1>
-            <p>Encontre os melhores tênis com até 40% de desconto</p>
-            <button class="btn-verprodutos">Ver Produtos</button>
+            <h1>O tênis certo não completa o look.<br>Ele começa a conversa.</h1>
+            <p>Curadoria de silhuetas que definem quem você é — antes mesmo de dizer uma palavra.</p>
+            <button class="btn-verprodutos" onclick="document.getElementById('produtos').scrollIntoView({behavior: 'smooth'})">Explorar Coleção</button>
         </div>
     </section>
 
     <section class="produtos" id="produtos">
 
         <div class="card">
-            <a href="tenis1.html" class="card-link">
-            <div class="card-image">
-                <img src="imagens/tenis1.jpg" alt="Tênis Nike">
-                <span class="badge-desconto">-30%</span>
-            </div>
+            <a href="pages/nike-air.html" class="card-link">
+                <div class="card-image">
+                    <img src="assets/img/produtos/nike-air.jpg" alt="Tênis Nike Air">
+                    <span class="badge-desconto">Curadoria</span>
+                </div>
             </a>
             <div class="card-content">
                 <h3>Tênis Nike Air</h3>
-                <p class="descricao">Conforto e desempenho em um único modelo</p>
+                <p class="descricao">Silhueta clássica e amortecimento que marcou gerações.</p>
                 <div class="preco-container">
                     <p class="preco-original">R$ 599</p>
                     <p class="preco">R$ 399</p>
                 </div>
-                <button class="btn-add" onclick="adicionarAoCarrinho('Nike Air', 399, 'tenis1.html')">ADICIONAR AO CARRINHO</button>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Nike Air', 399, 'assets/img/produtos/nike-air.jpg')">Adicionar à Coleção</button>
             </div>
         </div>
 
         <div class="card">
-            <a href="tenis2.html">
-            <div class="card-image">
-                <img src="imagens/tenis2.jpg" alt="Tênis Adidas">
-                <span class="badge-desconto">-25%</span>
-            </div>
+            <a href="pages/adidas-ultra.html">
+                <div class="card-image">
+                    <img src="assets/img/produtos/adidas-ultra.jpg" alt="Tênis Adidas Ultra">
+                    <span class="badge-desconto">Curadoria</span>
+                </div>
             </a>
             <div class="card-content">
                 <h3>Tênis Adidas Ultra</h3>
-                <p class="descricao">Tecnologia de última geração</p>
+                <p class="descricao">Design inovador com engenharia responsiva e precisão urbana.</p>
                 <div class="preco-container">
                     <p class="preco-original">R$ 499</p>
                     <p class="preco">R$ 349</p>
                 </div>
-                <button class="btn-add" onclick="adicionarAoCarrinho('Adidas Ultra', 349, 'tenis2.html')">ADICIONAR AO CARRINHO</button>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Adidas Ultra', 349, 'assets/img/produtos/adidas-ultra.jpg')">Adicionar à Coleção</button>
             </div>
         </div>
 
         <div class="card">
-            <a href="tenis3.html">
-            <div class="card-image">
-                <img src="imagens/tenis3.jpg" alt="Tênis Puma">
-                <span class="badge-desconto">-40%</span>
-            </div>
+            <a href="pages/puma-sport.html">
+                <div class="card-image">
+                    <img src="assets/img/produtos/puma-sport.jpg" alt="Tênis Puma Sport">
+                    <span class="badge-desconto">Curadoria</span>
+                </div>
             </a>
             <div class="card-content">
                 <h3>Tênis Puma Sport</h3>
-                <p class="descricao">Leveza e estilo em cada passo</p>
+                <p class="descricao">Estética contemporânea focada em leveza e performance diária.</p>
                 <div class="preco-container">
                     <p class="preco-original">R$ 499</p>
                     <p class="preco">R$ 299</p>
                 </div>
-                <button class="btn-add" onclick="adicionarAoCarrinho('Puma Sport', 299, 'tenis3.html')">ADICIONAR AO CARRINHO</button>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Puma Sport', 299, 'assets/img/produtos/puma-sport.jpg')">Adicionar à Coleção</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="pages/nike-air-max-alpha.html">
+                <div class="card-image">
+                    <img src="assets/img/produtos/nike-air-max-alpha.png" alt="Tênis Nike Air Max Alpha">
+                    <span class="badge-desconto">Curadoria</span>
+                </div>
+            </a>
+            <div class="card-content">
+                <h3>Tênis Nike Air Max Alpha</h3>
+                <p class="descricao">Amortecimento robusto com estabilidade superior para treinos intensos.</p>
+                <div class="preco-container">
+                    <p class="preco-original">R$ 799</p>
+                    <p class="preco">R$ 549</p>
+                </div>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Nike Air Max Alpha', 549, 'assets/img/produtos/nike-air-max-alpha.png')">Adicionar à Coleção</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="pages/adidas-grand-court.html">
+                <div class="card-image">
+                    <img src="assets/img/produtos/adidas-grand-court.webp" alt="Tênis Adidas Grand Court">
+                    <span class="badge-desconto">Curadoria</span>
+                </div>
+            </a>
+            <div class="card-content">
+                <h3>Tênis Adidas Grand Court</h3>
+                <p class="descricao">O clássico das quadras redesenhado com as icônicas três listras.</p>
+                <div class="preco-container">
+                    <p class="preco-original">R$ 449</p>
+                    <p class="preco">R$ 329</p>
+                </div>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Adidas Grand Court', 329, 'assets/img/produtos/adidas-grand-court.webp')">Adicionar à Coleção</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="pages/adidas-duramo-sl.html">
+                <div class="card-image">
+                    <img src="assets/img/produtos/adidas-duramo-sl.jpg" alt="Tênis Adidas Duramo SL">
+                    <span class="badge-desconto">Curadoria</span>
+                </div>
+            </a>
+            <div class="card-content">
+                <h3>Tênis Adidas Duramo SL</h3>
+                <p class="descricao">Leveza e amortecimento responsivo para treinos e uso diário no asfalto.</p>
+                <div class="preco-container">
+                    <p class="preco-original">R$ 419</p>
+                    <p class="preco">R$ 299</p>
+                </div>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Adidas Duramo SL', 299, 'assets/img/produtos/adidas-duramo-sl.jpg')">Adicionar à Coleção</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="pages/nike-revolution-7.html">
+                <div class="card-image">
+                    <img src="assets/img/produtos/nike-revolution-7.jpg" alt="Tênis Nike Revolution 7">
+                    <span class="badge-desconto">Curadoria</span>
+                </div>
+            </a>
+            <div class="card-content">
+                <h3>Tênis Nike Revolution 7</h3>
+                <p class="descricao">Amortecimento macio e suporte leve para sua jornada de corrida.</p>
+                <div class="preco-container">
+                    <p class="preco-original">R$ 499</p>
+                    <p class="preco">R$ 349</p>
+                </div>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Nike Revolution 7', 349, 'assets/img/produtos/nike-revolution-7.jpg')">Adicionar à Coleção</button>
             </div>
         </div>
     </section>
 
     <section class="sobre" id="quemsomos">
-        <h2>Por que nos escolher?</h2>
+        <h2>Uma nova forma de escolher.</h2>
+        
+        <div class="sobre-manifesto">
+            <p>A Outlet Senai nasceu da energia urbana. Do movimento constante de quem vive as ruas e enxerga em cada par de tênis uma extensão da própria identidade. Mas toda caminhada ganha maturidade — e a nossa evoluiu para um design mais claro e consciente.</p>
+            <p>Não estamos aqui para fazer barulho ou insistir em ofertas passageiras. Estamos aqui para selecionar. Cada modelo que entra em nosso acervo passa por uma avaliação simples: ele traz design expressivo e relevância cultural? Se a resposta não for um sim imediato, ele não entra.</p>
+            <p>Acreditamos que a cultura <em>sneakerhead</em> vai além do consumo; ela é uma linguagem visual. É o modo como você se posiciona no concreto, o detalhe que diz muito sem precisar gritar. Nosso papel é garantir que esse detalhe esteja à altura do seu estilo.</p>
+            <p>Esta é a nossa nova fase. Menos ruído, mais intenção. Menos urgência artificial e muito mais valor real. Cada par que entregamos carrega a dedicação de uma curadoria feita para quem entende que o essencial nunca passa despercebido.</p>
+        </div>
+
         <div class="sobre-grid">
             <div class="sobre-card">
-                <div class="sobre-icon">✓</div>
-                <h4>Preços Baixos</h4>
-                <p>Os melhores preços do mercado com qualidade garantida</p>
+                <div class="sobre-icon"><i class="fa-solid fa-truck"></i></div>
+                <h4>Entrega com cuidado</h4>
+                <p>Enviamos para todo o Brasil com embalagem protetora e rastreamento completo. Seu par chega impecável, no tempo certo.</p>
             </div>
             <div class="sobre-card">
-                <div class="sobre-icon">✓</div>
-                <h4>Frete Rápido</h4>
-                <p>Entrega em até 3 dias úteis para todo o Brasil</p>
+                <div class="sobre-icon"><i class="fa-solid fa-credit-card"></i></div>
+                <h4>Flexibilidade sob medida</h4>
+                <p>Parcele em até 10x sem juros. Acreditamos que investir em design e estilo deve ser uma experiência leve.</p>
             </div>
             <div class="sobre-card">
-                <div class="sobre-icon">✓</div>
-                <h4>Garantia</h4>
-                <p>30 dias de garantia em todos os produtos</p>
+                <div class="sobre-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h4>100% original. Sem exceções.</h4>
+                <p>Cada par da nossa seleção é rigorosamente verificado antes de chegar até você. Parceria direta com marcas certificadas.</p>
             </div>
         </div>
     </section>
 
     <footer id="contato">
         <div class="footer-container">
-            <div class="footer-section">
-                <h4>Outlet Senai</h4>
-                <p>Sua loja de tênis online com os melhores preços e qualidade garantida.</p>
+            <div class="footer-section" style="max-width: 350px;">
+                <h4 style="font-size: 1.25rem;">Outlet Senai</h4>
+                <p style="font-size: 1.15rem; font-weight: 500; line-height: 1.4; color: var(--color-white); opacity: 0.9; margin-top: 15px;">Estilo não se desconta. Se reconhece.</p>
             </div>
             <div class="footer-section">
-                <h4>Links Rápidos</h4>
+                <h4>Curadoria</h4>
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#produtos">Silhuetas</a></li>
+                    <li><a href="#quemsomos">Manifesto</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Contato</h4>
                 <p>Email: contato@outletsenai.com</p>
                 <p>Tel: (11) 9999-9999</p>
-                <p>Participante: Gabriel, Jonathan, Kauê, Miguel</p>
+                <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.6;">Participantes: Gabriel, Jonathan, Kauê, Miguel</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Outlet Senai. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Outlet Senai. Curadoria e design conscientes.</p>
         </div>
     </footer>
-    <div id="toast-carrinho" class="toast">Produto adicionado ao carrinho!</div>
-    <script>
-       let itensCarrinho = []; // Nossa lista de produtos vazia
-
-function adicionarAoCarrinho(nome, preco, imagem) {
-    // 1. Adiciona o objeto do tênis na nossa lista
-    itensCarrinho.push({ nome, preco, imagem });
-
-    // 2. Atualiza o número no ícone
-    document.getElementById('cart-count').innerText = itensCarrinho.length;
-
-    // 3. Renderiza (desenha) a lista atualizada dentro do carrinho
-    atualizarVisualizacaoCarrinho();
-    
-    // Opcional: Avisar que foi adicionado (substituindo o alert)
-    console.log("Adicionado:", nome);
-}
-
-function atualizarVisualizacaoCarrinho() {
-    const listaHtml = document.getElementById('itens-lista');
-    const totalHtml = document.getElementById('total-carrinho');
-    let total = 0;
-
-    listaHtml.innerHTML = ""; // Limpa a lista para desenhar do zero
-
-    itensCarrinho.forEach((item) => {
-        total += item.preco;
-        listaHtml.innerHTML += `
-            <div class="item-no-carrinho">
-                <img src="${item.imagem}" alt="${item.nome}">
-                <div>
-                    <p><strong>${item.nome}</strong></p>
-                    <p>R$ ${item.preco}</p>
-                </div>
-            </div>
-        `;
-    });
-
-    totalHtml.innerText = `R$ ${total.toFixed(2)}`;
-}
-
-// Função para abrir e fechar o carrinho ao clicar no ícone
-function toggleCarrinho() {
-    const modal = document.getElementById('carrinho-lateral');
-    if (modal.style.display === "block") {
-        modal.style.display = "none";
-    } else {
-        modal.style.display = "block";
-    }
-}
-    </script>
+    <div id="toast-carrinho" class="toast">Produto adicionado à sua coleção!</div>
+    <script src="assets/js/carrinho.js"></script>
 </body>
 </html>
